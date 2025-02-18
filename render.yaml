@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rola v1
+    repo: https://github.com/PeaseErnest12287/rola-v1-bot.git
+    branch: main
+    env: docker
+    dockerfilePath: lib/Dockerfile
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: SESSION_ID
+        sync: false
+        required: true
